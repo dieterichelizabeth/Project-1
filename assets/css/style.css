@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #86a1a9;
+    --secondary: #e08bbb;
+    --tertiary: #D37F3F;
+    --quaternary: #6667AB;
+    --quinary: #28282D;
+    --senary: #f1F0ec;
+}
+
+body {
+    background: #f1F0ec;
+    margin: 0;
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#logo img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+}
+
+#casset-tape img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px;
+    max-height: 300px;
+    padding: 1rem;
+}
+
+@media screen and (max-width: 980px) {
+  form .form-group {
+    flex: 1 100%;
+  }
+    
+  form .form-group button {
+    width: 100%;
+  }
+    
+  .task-list-wrapper {
+    flex-basis: 100%;
+  }
+  
+}
