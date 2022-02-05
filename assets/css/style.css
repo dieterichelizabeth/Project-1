@@ -1,0 +1,17 @@
+* {
+    background-color: #F1F0EC;
+    color: #28282d;
+}
+
+h1 {
+    background-image: url('./imgs/MixTapeText.png');
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto;
+    height: 75px;
+    width: 500px;
+}
+
+
+
