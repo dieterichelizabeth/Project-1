@@ -3,15 +3,67 @@
     color: #28282d;
 }
 
-h1 {
-    background-image: url('./imgs/MixTapeText.png');
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: auto;
-    height: 75px;
-    width: 500px;
+/*logo {
+
+
 }
 
 
+jumbotron {
 
+} */
+
+/* Email, etc*/
+.section {
+    border: solid 3px #d37f3f;
+    background-color:#86a1a9
+}
+.task-list-wrapper {
+    background-color: #86a1a9;
+    flex: 1;
+    margin: 0 20px 20px;
+  }
+  
+  .list-title {
+      margin: 5px;
+      background-color: #86a1a9;
+    color: #d37f3f;
+    font-size: 2.6rem;
+  }
+  
+  .task-list {
+    list-style: none;
+    padding: 15px;
+    height: calc(100% - 50px);
+    background: #86a1a9;
+    border:none;
+  }
+
+  /*Clipboard*/
+  .clipboard {
+    border: 0;
+    padding: 15px;
+    border-radius: 3px;
+    background-image: #f1f0ec;
+    cursor: pointer;
+    color: #04048c;
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    position: relative;
+    top: 0;
+    transition: all .2s ease;
+    &:hover {
+      top: 2px;
+    }
+  }
+
+  .btn {
+    background-color: #d37f3f
+    border: solid;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
