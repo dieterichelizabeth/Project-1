@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mixtape</title>
+    <!---------- Bootstrap ---------->
+    <link href=“https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css” rel=“stylesheet” integrity=“sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3” crossorigin=“anonymous”>
+    2:04
+    <!---------- Bootstrap Icons ---------->
+      <link rel=“stylesheet” href=“https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css”>
+      <link rel="stylesheet" href="./assets/css/style.css">
+    </head>
 
   </head>
   <body>
@@ -33,50 +40,67 @@
    
     <!---- Spotify API song boxes ---->
     <!---- Example songs ---->
-    <section>
+    <section class="task-list-wrapper">
+      <!---- Name of the section ---->
+      <h2 class="list-title">Search Results</h2>
         <!---- See what kind of tag required for songs per Spotify API ---->
-        <div class=“m-5 row justify-content-around”>
+        <ul class="task-list" id="tasks-to-do"></ul>
+        <div class=“”>
             <!-- song populates -->
-            <div class=“col-12 col-md-6 col-xl-3 mb-3">
-              <div class=“card”>
-                <h4 class=“card-header bg-dark text-light”>
-                  Song
-                </h4>
-                <ul id=“list-toDo” class=“list-group list-group-flush”>
-                </ul>
+            <li class="task-item" data-task-id="1">
+              <div class="task-info">
+                <p>Spotify icon</p>
+                <p class="task-name">Song Name</p>
+                <p class="task-name">Artist</p>
+                <p class="task-name">Album Name</p>
               </div>
-            </div>
+              <div class="buttons">
+              <button class="btn play-btn">Play</button> <!-- Play in the play in the "play song" -->
+              <button class="btn delete-btn">Add</button> <!-- Adds song to the "track list" -->
+              </div>
+            </li>
             <!-- song populates -->
-            <div class=“col-12 col-md-6 col-xl-3 mb-3”>
-              <div class=“card”>
-                <h4 class=“card-header bg-dark text-light”>
-                 Song
-                </h4>
-                <ul id=“list-inProgress” class=“list-group list-group-flush”>
-                </ul>
+            <li class="task-item" data-task-id="1">
+              <div class="task-info">
+                <p>Spotify icon</p>
+                <p class="task-name">Song Name</p>
+                <p class="task-name">Artist</p>
+                <p class="task-name">Album Name</p>
               </div>
-            </div>
+              <div>
+              <button class="btn play-btn">Play</button> <!-- Play in the play in the "play song" -->
+              <button class="btn delete-btn">Add</button> <!-- Adds song to the "track list" -->
+              </div>
+            </li>
             <!-- song populates -->
-            <div class=“col-12 col-md-6 col-xl-3 mb-3">
-              <div class=“card”>
-                <h4 class=“card-header bg-dark text-light”>
-                  Song
-                </h4>
-                <ul id=“list-inReview” class=“list-group list-group-flush”>
-                </ul>
+            <li class="task-item" data-task-id="1">
+              <div class="task-info">
+                <p>Spotify icon</p>
+                <p class="task-name">Song Name</p>
+                <p class="task-name">Artist</p>
+                <p class="task-name">Album Name</p>
               </div>
-            </div>
+              <div>
+              <button class="btn play-btn">Play</button> <!-- Play in the play in the "play song" -->
+              <button class="btn delete-btn">Add</button> <!-- Adds song to the "track list" -->
+              </div>
+            </li>
             <!-- song populates -->
-            <div class=“col-12 col-md-6 col-xl-3 mb-3”>
-              <div class=“card”>
-                <h4 class=“card-header bg-dark text-light”>
-                  Add button
-                </h4>
-                <ul id=“list-done” class=“list-group list-group-flush”>
-                </ul>
+            <li class="task-item" data-task-id="1">
+              <div class="task-info">
+                <p>Spotify icon</p>
+                <p class="task-name">Song Name</p>
+                <p class="task-name">Artist</p>
+                <p class="task-name">Album Name</p>
               </div>
-            </div>
+              <div>
+              <button class="btn play-btn">Play</button> <!-- Play in the play in the "play song" -->
+              <button class="btn delete-btn">Add</button> <!-- Adds song to the "track list" -->
+              </div>
+            </li>
         </div>
+      </ul>
+      </section>
 
         <!-- ADD PLAYER HERE -->
         
