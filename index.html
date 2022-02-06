@@ -1,240 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mixtape</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-  </head>
 
-  <!------ Logo and Tape Image ---------->
-  <body>
-    <header>
-      <!---- logo ---->
-      <div id="logo">
-        <a href="">
-          <img src="./images/MixTapelogo.jpg" alt="Mixtape Logo" />
-        </a>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mixtape</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
 
-    <!---- Casset Tape img ---->
-    <div id="casset-tape">
+<!------ Logo and Tape Image ---------->
+
+<body>
+  <header>
+    <!---- logo ---->
+    <div id="logo">
       <a href="">
-        <img src="./images/MixTape.jpg" alt="casset-tape" />
+        <img src="./images/MixTapelogo.jpg" alt="Mixtape Logo" />
       </a>
     </div>
+  </header>
 
-    <!---- search Bar ---->
-    <div>
-      <div style="display: flex" class="“form-group”">
-        <!---- search for song/artist from api ---->
-        <input
-          type="text"
-          name="city-input"
-          class="form-control"
-          placeholder="Enter a Song/Artist"
-          aria-label="Search"
-          id="city-input"
-        />
+  <!---- Casset Tape img ---->
+  <div id="casset-tape">
+    <a href="">
+      <img src="./images/MixTape.jpg" alt="casset-tape" />
+    </a>
+  </div>
 
-        <!-- class=“btn my-sm-0 ms-1 btn-outline-light my-2" -->
-        <!---- Submit Button for your spotify API search---->
-        <button id="submit" class="btn" type="submit">
-          <i class="bi bi-search"></i>Search
-        </button>
-      </div>
+  <!---- search Bar ---->
+  <div>
+    <div style="display: flex" class="“form-group”">
+      <!---- search for song/artist from api ---->
+      <input type="text" name="city-input" class="form-control" placeholder="Enter a Song/Artist" aria-label="Search"
+        id="city-input" />
+
+      <!-- class=“btn my-sm-0 ms-1 btn-outline-light my-2" -->
+      <!---- Submit Button for your spotify API search---->
+      <button id="submit" class="btn" type="submit">
+        <i class="bi bi-search"></i>Search
+      </button>
     </div>
-    <!---- Spotify API song boxes ---->
-    <!---- Example songs ---->
-    <section class="">
-      <!---- Name of the section ---->
-      <h2 class="list-title">Search Results</h2>
-      <!---- See what kind of tag required for songs per Spotify API ---->
-      <ul class="search-results" id="tasks-to-do">
-        <div class="Parent">
-          <!-- song populates -->
-          <li class="Search1 Child1" data-task-id="1">
-            <img class="spotifyLogo" src="./images/spotifyLogo.png" />
-            <div class="task-info">
-              <p class="task-name">Song Name</p>
-              <p class="task-name">Artist</p>
-              <p class="task-name">Album Name</p>
-            </div>
-            <div class="centerBtn">
-              <button class="btn playDelete">Play</button>
-              <!-- Play in the play in the "play song" -->
-              <button class="btn playDelete">Add</button>
-              <!-- Adds song to the "track list" -->
-            </div>
-          </li>
-          <!-- song populates -->
-          <li class="Search2 Child2" data-task-id="1">
-            <img class="spotifyLogo" src="./images/spotifyLogo.png" />
-            <div class="task-info">
-              <p class="task-name">Song Name</p>
-              <p class="task-name">Artist</p>
-              <p class="task-name">Album Name</p>
-            </div>
-            <div class="centerBtn">
-              <button class="btn playDelete">Play</button>
-              <!-- Play in the play in the "play song" -->
-              <button class="btn playDelete">Add</button>
-              <!-- Adds song to the "track list" -->
-            </div>
-          </li>
-        </div>
-        <div class="Parent">
-          <!-- song populates -->
-          <li class="Search3 Child2" data-task-id="1">
-            <img class="spotifyLogo" src="./images/spotifyLogo.png" />
-            <div class="task-info">
-              <p class="task-name">Song Name</p>
-              <p class="task-name">Artist</p>
-              <p class="task-name">Album Name</p>
-            </div>
-            <div class="centerBtn">
-              <button class="btn playDelete">Play</button>
-              <!-- Play in the play in the "play song" -->
-              <button class="btn playDelete">Add</button>
-              <!-- Adds song to the "track list" -->
-            </div>
-          </li>
-          <!-- song populates -->
-          <li class="Search4 Child1" data-task-id="1">
-            <img class="spotifyLogo" src="./images/spotifyLogo.png" />
-            <div class="task-info">
-              <p class="task-name">Song Name</p>
-              <p class="task-name">Artist</p>
-              <p class="task-name">Album Name</p>
-            </div>
-            <div class="centerBtn">
-              <button class="btn playDelete">Play</button>
-              <!-- Play in the play in the "play song" -->
-              <button class="btn playDelete">Add</button>
-              <!-- Adds song to the "track list" -->
-            </div>
-          </li>
-        </div>
-      </ul>
-    </section>
+  </div>
+  <!---- Spotify API song boxes ---->
+  <!---- Example songs ---->
+  <section class="">
+    <!---- Name of the section ---->
+    <h2 class="list-title">Search Results</h2>
+    <!---- See what kind of tag required for songs per Spotify API ---->
+    <ul class="search-results" id="tasks-to-do">
+      <div class="Parent">
+        <!-- song populates -->
+        <li class="Search1 Child1" data-task-id="1">
+          <img class="spotifyLogo" src="./images/spotifyLogo.png" />
+          <div class="task-info">
+            <p class="task-name">Song Name</p>
+            <p class="task-name">Artist</p>
+            <p class="task-name">Album Name</p>
+          </div>
+          <div class="centerBtn">
+            <button class="btn playDelete">Play</button>
+            <!-- Play in the play in the "play song" -->
+            <button class="btn playDelete">Add</button>
+            <!-- Adds song to the "track list" -->
+          </div>
+        </li>
+        <!-- song populates -->
+        <li class="Search2 Child2" data-task-id="1">
+          <img class="spotifyLogo" src="./images/spotifyLogo.png" />
+          <div class="task-info">
+            <p class="task-name">Song Name</p>
+            <p class="task-name">Artist</p>
+            <p class="task-name">Album Name</p>
+          </div>
+          <div class="centerBtn">
+            <button class="btn playDelete">Play</button>
+            <!-- Play in the play in the "play song" -->
+            <button class="btn playDelete">Add</button>
+            <!-- Adds song to the "track list" -->
+          </div>
+        </li>
+      </div>
+      <div class="Parent">
+        <!-- song populates -->
+        <li class="Search3 Child2" data-task-id="1">
+          <img class="spotifyLogo" src="./images/spotifyLogo.png" />
+          <div class="task-info">
+            <p class="task-name">Song Name</p>
+            <p class="task-name">Artist</p>
+            <p class="task-name">Album Name</p>
+          </div>
+          <div class="centerBtn">
+            <button class="btn playDelete">Play</button>
+            <!-- Play in the play in the "play song" -->
+            <button class="btn playDelete">Add</button>
+            <!-- Adds song to the "track list" -->
+          </div>
+        </li>
+        <!-- song populates -->
+        <li class="Search4 Child1" data-task-id="1">
+          <img class="spotifyLogo" src="./images/spotifyLogo.png" />
+          <div class="task-info">
+            <p class="task-name">Song Name</p>
+            <p class="task-name">Artist</p>
+            <p class="task-name">Album Name</p>
+          </div>
+          <div class="centerBtn">
+            <button class="btn playDelete">Play</button>
+            <!-- Play in the play in the "play song" -->
+            <button class="btn playDelete">Add</button>
+            <!-- Adds song to the "track list" -->
+          </div>
+        </li>
+      </div>
+    </ul>
+  </section>
 
-    <!-- ADD PLAYER HERE -->
+  <!-- ADD PLAYER HERE -->
 
-    <section class="track-list-wrapper">
-      <!---- Name of the section ---->
-      <h2 class="list-title">Track list</h2>
-      <!---- See what kind of tag required for songs per Spotify API ---->
-      <ul class="task-list" id="tasks-to-do">
-        <div class="">
-          <!-- song populates -->
-          <li class="task-item" data-task-id="1">
-            <div class="task-info">
-              <img class="spotifyLogo" src="./images/spotifyLogo.png" />
-              <p class="task-name">Song Name</p>
-              <p class="task-name">Artist</p>
-              <p class="task-name">Album Name</p>
-            </div>
-            <div>
-              <button class="btn play-btn">Play</button>
-              <!-- Play in the play in the "play song" -->
-              <button class="btn delete-btn">delete</button>
-              <!-- Adds song to the "track list" -->
-            </div>
-          </li>
-          <!-- song populates -->
-          <li class="task-item" data-task-id="1">
-            <div class="task-info">
-              <img class="spotifyLogo" src="./images/spotifyLogo.png" />
-              <p class="task-name">Song Name</p>
-              <p class="task-name">Artist</p>
-              <p class="task-name">Album Name</p>
-            </div>
-            <div>
-              <button class="btn play-btn">Play</button>
-              <!-- Play in the play in the "play song" -->
-              <button class="btn delete-btn">delete</button>
-              <!-- Adds song to the "track list" -->
-            </div>
-          </li>
-          <!-- song populates -->
-          <li class="task-item" data-task-id="1">
-            <div class="task-info">
-              <img class="spotifyLogo" src="./images/spotifyLogo.png" />
-              <p class="task-name">Song Name</p>
-              <p class="task-name">Artist</p>
-              <p class="task-name">Album Name</p>
-            </div>
-            <div>
-              <button class="btn play-btn">Play</button>
-              <!-- Play in the play in the "play song" -->
-              <button class="btn delete-btn">delete</button>
-              <!-- Adds song to the "track list" -->
-            </div>
-          </li>
-          <!-- song populates -->
-          <li class="task-item" data-task-id="1">
-            <div class="task-info">
-              <img class="spotifyLogo" src="./images/spotifyLogo.png" />
-              <p class="task-name">Song Name</p>
-              <p class="task-name">Artist</p>
-              <p class="task-name">Album Name</p>
-            </div>
-            <div>
-              <button class="btn play-btn">Play</button>
-              <!-- Play in the play in the "play song" -->
-              <button class="btn delete-btn">delete</button>
-              <!-- Adds song to the "track list" -->
-            </div>
-          </li>
-        </div>
-      </ul>
-    </section>
+  <section class="track-list-wrapper">
+    <!---- Name of the section ---->
+    <h2 class="list-title">Track list</h2>
+    <!---- See what kind of tag required for songs per Spotify API ---->
+    <ul class="task-list" id="tasks-to-do">
+      <div class="">
+        <!-- song populates -->
+        <li class="task-item" data-task-id="1">
+          <div class="task-info">
+            <img class="spotifyLogo" src="./images/spotifyLogo.png" />
+            <p class="task-name">Song Name</p>
+            <p class="task-name">Artist</p>
+            <p class="task-name">Album Name</p>
+          </div>
+          <div>
+            <button class="btn play-btn">Play</button>
+            <!-- Play in the play in the "play song" -->
+            <button class="btn delete-btn">delete</button>
+            <!-- Adds song to the "track list" -->
+          </div>
+        </li>
+        <!-- song populates -->
+        <li class="task-item" data-task-id="1">
+          <div class="task-info">
+            <img class="spotifyLogo" src="./images/spotifyLogo.png" />
+            <p class="task-name">Song Name</p>
+            <p class="task-name">Artist</p>
+            <p class="task-name">Album Name</p>
+          </div>
+          <div>
+            <button class="btn play-btn">Play</button>
+            <!-- Play in the play in the "play song" -->
+            <button class="btn delete-btn">delete</button>
+            <!-- Adds song to the "track list" -->
+          </div>
+        </li>
+        <!-- song populates -->
+        <li class="task-item" data-task-id="1">
+          <div class="task-info">
+            <img class="spotifyLogo" src="./images/spotifyLogo.png" />
+            <p class="task-name">Song Name</p>
+            <p class="task-name">Artist</p>
+            <p class="task-name">Album Name</p>
+          </div>
+          <div>
+            <button class="btn play-btn">Play</button>
+            <!-- Play in the play in the "play song" -->
+            <button class="btn delete-btn">delete</button>
+            <!-- Adds song to the "track list" -->
+          </div>
+        </li>
+        <!-- song populates -->
+        <li class="task-item" data-task-id="1">
+          <div class="task-info">
+            <img class="spotifyLogo" src="./images/spotifyLogo.png" />
+            <p class="task-name">Song Name</p>
+            <p class="task-name">Artist</p>
+            <p class="task-name">Album Name</p>
+          </div>
+          <div>
+            <button class="btn play-btn">Play</button>
+            <!-- Play in the play in the "play song" -->
+            <button class="btn delete-btn">delete</button>
+            <!-- Adds song to the "track list" -->
+          </div>
+        </li>
+      </div>
+    </ul>
+  </section>
 
-    <!-- 2 Buttons for the track list -->
-    <div class="center">
-      <!-- Clear Button - Clears playlist -->
-      <button type="clear" id="“btnclear”" class="btn">Clear</button>
-      <!-- Submit Button - Triggers Modal -->
-      <button type="delete" id="btndelete" class="btn">Submit</button>
+  <!-- 2 Buttons for the track list -->
+  <div class="center">
+    <!-- Clear Button - Clears playlist -->
+    <button type="clear" id="“btnclear”" class="btn">Clear</button>
+    <!-- Submit Button - Triggers Modal -->
+    <button type="delete" id="btndelete" class="btn">Submit</button>
+  </div>
+
+  <!-- For the modal -->
+  <!-- <div style=“display: flex” class=“form-group”> -->
+  <!---- Name your tape Input Field ---->
+  <!-- <input type=“text” name=“city-input” class=“form-control mr-sm-2 float-left” placeholder=“Enter a City...” aria-label=“Search” id=“city-input”> -->
+  <!---- Submit Button for your tape---->
+  <!-- <button id=“submit” class=“btn my-sm-0 ms-1 btn-outline-light my-2" type=“submit”><i class=“bi bi-search”></i> -->
+  <!-- </button> -->
+  <!-- </div> -->
+  <!-- Trigger/Open The Modal -->
+  <section class="track-list-wrapper">
+    <h2 class="list-title">Share Tape!</h2>
+
+    <!-- Clipboard -->
+    <div class="btn">
+      <button class="clipboard">Click me to copy current URL</button>
+      <p>Have you already clicked?</p>
     </div>
 
-    <!-- For the modal -->
-    <!-- <div style=“display: flex” class=“form-group”> -->
-    <!---- Name your tape Input Field ---->
-    <!-- <input type=“text” name=“city-input” class=“form-control mr-sm-2 float-left” placeholder=“Enter a City...” aria-label=“Search” id=“city-input”> -->
-    <!---- Submit Button for your tape---->
-    <!-- <button id=“submit” class=“btn my-sm-0 ms-1 btn-outline-light my-2" type=“submit”><i class=“bi bi-search”></i> -->
-    <!-- </button> -->
-    <!-- </div> -->
-    <!-- Trigger/Open The Modal -->
-    <section class="track-list-wrapper">
-      <h2 class="list-title">Share Tape!</h2>
-      <!-- Email to be re-worked-->
-      <a href="mailto: abd@example.com" class="email">Send Email</a>
+    <!-- Twitter (url, text, @mention) -->
+    <a href="https://twitter.com/share?url=<URL>&text=<TEXT>via=<USERNAME>">
+      Twitter
+    </a>
 
-      <!-- Clipboard -->
-      <div class="btn">
-        <button class="clipboard">Click me to copy current URL</button>
-        <p>Have you already clicked?</p>
-      </div>
+    <!-- Facebook (url) -->
+    <a href="https://www.facebook.com/sharer/sharer.php?u=<URL>">
+      Facebook
+    </a>
 
-      <!-- Share to Facebook -->
-      <a
-        href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fparse.com"
-        target="_blank"
-        rel="noopener"
-      >
-        <img
-          class="facebook"
-          src="./images/facebook-scalable-graphics-icon-facebook-logo-facebook-logo-png-clip-art.png"
-          alt="Share on Facebook"
-        />
-      </a>
-    </section>
+    <!-- Reddit (url, title) -->
+    <a href="https://reddit.com/submit?url=<URL>&title=<TITLE>">
+      Reddit
+    </a>
+  </section>
 
-    <!--<script src="assets/js/tailwind.config.js"></script>-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  </body>
+    <!-- Email (subject, body) -->
+    <a href="mailto:?subject=<SUBJECT>&body=<BODY>">
+     Email
+     </a>
+
+  <!--<script src="assets/js/tailwind.config.js"></script>-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+
 </html>
