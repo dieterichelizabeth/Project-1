@@ -160,6 +160,7 @@ body {
   flex: 1;
   margin: 0 20px 20px;
   border-radius: 50px;
+  display: center;
 }
 
 .task-list {
@@ -170,10 +171,6 @@ body {
   border: none;
 }
 
-.email {
-  text-decoration: none;
-  color: #28282d;
-}
 
 /*Clipboard*/
 .clipboard {
@@ -182,18 +179,40 @@ body {
   border-radius: 3px;
   background-image: var(--senary);
   cursor: pointer;
-  color: #04048c;
-  font-family: "Karla", sans-serif;
+  color: var(--tertiary);
+  font-family: sans-serif;
   font-size: 16px;
   position: relative;
   top: 0;
   transition: all 0.2s ease;
+  display: center;
 }
 
-.facebook {
-  height: 50px;
-  width: 80px;
-}
+.share-btn {
+    display: inline-block;
+    color: var(--senary);
+    border: solid 1px;
+    padding: 0.1em 0.6em;
+    outline: none;
+    text-align: center;
+    font-size: 0.9em;
+    margin-left: 5em;
+  }
+  
+  .share-btn:focus,
+  .share-btn:hover {
+    text-decoration: none;
+    opacity: 0.8;
+  }
+  
+  .share-btn:active {
+    color: #e2e2e2;
+  }
+  
+  .share-btn.twitter     { background: #55acee; }
+  .share-btn.facebook    { background: #3B5998; }
+  .share-btn.reddit      { background: #ff5700; }
+  .share-btn.email       { background: var(--quaternary); }
 
 /* Adapt to screen size */
 @media screen and (max-width: 980px) {
