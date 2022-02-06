@@ -55,6 +55,19 @@ body {
 }
 
 /* styles to sections */
+.Parent {
+  display: flex;
+  flex-direction: row;
+}
+
+.Child1 {
+  width: 50%;
+}
+
+.Child2 {
+  width: 50%;
+}
+
 .playDelete {
   background-color: var(--quinary);
 }
