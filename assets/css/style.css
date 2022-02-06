@@ -160,6 +160,8 @@ body {
   flex: 1;
   margin: 0 20px 20px;
   border-radius: 50px;
+  display: flex;
+  justify-content: center;
 }
 
 .task-list {
@@ -168,12 +170,9 @@ body {
   height: calc(100% - 50px);
   background: var(--primary);
   border: none;
+  text-align: center;
 }
 
-.email {
-  text-decoration: none;
-  color: #28282d;
-}
 
 /*Clipboard*/
 .clipboard {
@@ -190,10 +189,36 @@ body {
   transition: all 0.2s ease;
 }
 
-.facebook {
-  height: 50px;
-  width: 80px;
+.btn {
+    justify-items: center;
 }
+/* Share CSS */
+.share-btn {
+    display: inline-block;
+    color: var(--senary);
+    border: none;
+    padding: 0.1em 0.6em;
+    outline: none;
+    text-align: center;
+    font-size: 0.9em;
+    margin: 0 0.2em;
+    justify-items: center;
+  }
+  
+  .share-btn:focus,
+  .share-btn:hover {
+    text-decoration: none;
+    opacity: 0.8;
+  }
+  
+  .share-btn:active {
+    color: var(--quaternary);
+  }
+  
+  .share-btn.twitter     { background: #55acee; }
+  .share-btn.facebook    { background: #3B5998; }
+  .share-btn.reddit      { background: #ff5700; }
+  .share-btn.email       { background: var(--quinary); }
 
 /* Adapt to screen size */
 @media screen and (max-width: 980px) {
@@ -210,29 +235,3 @@ body {
   }
 }
 
-/* Share CSS */
-.share-btn {
-    display: inline-block;
-    color: #ffffff;
-    border: none;
-    padding: 0.1em 0.6em;
-    outline: none;
-    text-align: center;
-    font-size: 0.9em;
-    margin: 0 0.2em;
-  }
-  
-  .share-btn:focus,
-  .share-btn:hover {
-    text-decoration: none;
-    opacity: 0.8;
-  }
-  
-  .share-btn:active {
-    color: #e2e2e2;
-  }
-  
-  .share-btn.twitter     { background: #55acee; }
-  .share-btn.facebook    { background: #3B5998; }
-  .share-btn.reddit      { background: #ff5700; }
-  .share-btn.email       { background: #444444; }
