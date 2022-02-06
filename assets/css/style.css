@@ -62,34 +62,50 @@ body {
 
 .Child1 {
   width: 50%;
+  height: 300px;
 }
 
 .Child2 {
   width: 50%;
+  height: 280px;
 }
 
 .playDelete {
   background-color: var(--quinary);
 }
 
+.centerBtn {
+  display: flex;
+  justify-content: center;
+}
+
 .Search1 {
   background-color: var(--secondary);
   list-style-type: none;
+  border-radius: 40px;
 }
 
 .Search2 {
   background-color: var(--primary);
   list-style-type: none;
+  margin-left: 15px;
+  border-radius: 50px;
+  margin-top: 15px;
 }
 
 .Search3 {
   background-color: var(--tertiary);
   list-style-type: none;
+  border-radius: 50px;
+  margin-top: 15px;
 }
 
 .Search4 {
   background-color: var(--quaternary);
   list-style-type: none;
+  margin-left: 15px;
+  border-radius: 40px;
+  margin-top: 15px;
 }
 
 /* styles to sections */
@@ -132,10 +148,11 @@ body {
 }
 
 /* Email*/
-.task-list-wrapper {
+.track-list-wrapper {
   background-color: #86a1a9;
   flex: 1;
   margin: 0 20px 20px;
+  border-radius: 50px;
 }
 
 .task-list {
