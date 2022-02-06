@@ -4,6 +4,7 @@
   /* color: #28282d; */
 }
 
+/* Utilities */
 :root {
   --primary: #86a1a9;
   --secondary: #e08bbb;
@@ -14,13 +15,29 @@
 }
 
 body {
-  background: #f1f0ec;
+  background: var(--senary);
   margin: 0;
   padding: 30px 25px;
   display: flex;
   flex-direction: column;
 }
 
+.center {
+  margin: auto;
+}
+
+.btn {
+  background-color: var(--tertiary);
+  border: solid;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+/* Header */
 #logo img {
   display: block;
   margin-left: auto;
@@ -37,23 +54,15 @@ body {
   padding: 1rem;
 }
 
-.center {
-  margin: auto;
-}
-
-.task-list-wrapper {
-  flex: 1;
-  margin: 0 20px 20px;
-}
-
+/* styles to sections */
 .list-title {
-  color: black;
   font-size: 2.6rem;
   text-align: center;
+  margin: 5px;
+  color: var(--tertiary);
 }
 
 .task-item {
-  color: black;
   padding: 15px 15px;
   border: 2px solid grey;
   background: white;
@@ -63,10 +72,6 @@ body {
   display: flex;
   flex-flow: column wrap;
   flex-direction: row;
-}
-
-.buttons {
-  justify-content: flex-end;
 }
 
 .task-info {
@@ -81,29 +86,25 @@ body {
   padding: 15px;
 }
 
-/* Email, etc*/
-.section {
-  border: solid 3px #d37f3f;
-  background-color: #86a1a9;
+.spotifyLogo {
+  height: 40px;
 }
+.alone {
+  width: 100%;
+}
+
+/* Email*/
 .task-list-wrapper {
   background-color: #86a1a9;
   flex: 1;
   margin: 0 20px 20px;
 }
 
-.list-title {
-  margin: 5px;
-  background-color: #86a1a9;
-  color: #d37f3f;
-  font-size: 2.6rem;
-}
-
 .task-list {
   list-style: none;
   padding: 15px;
   height: calc(100% - 50px);
-  background: #86a1a9;
+  background: var(--primary);
   border: none;
 }
 
@@ -112,7 +113,7 @@ body {
   border: 0;
   padding: 15px;
   border-radius: 3px;
-  background-image: #f1f0ec;
+  background-image: var(--senary);
   cursor: pointer;
   color: #04048c;
   font-family: "Karla", sans-serif;
@@ -122,22 +123,12 @@ body {
   transition: all 0.2s ease;
 }
 
-.btn {
-  background-color: #d37f3f;
-  border: solid;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-}
-
 .facebook {
   height: 50px;
   width: 80px;
 }
 
+/* Adapt to screen size */
 @media screen and (max-width: 980px) {
   form .form-group {
     flex: 1 100%;
