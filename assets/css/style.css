@@ -55,6 +55,10 @@ body {
 }
 
 /* styles to sections */
+.search-results {
+  margin-right: 20px;
+}
+
 .Parent {
   display: flex;
   flex-direction: row;
@@ -72,6 +76,8 @@ body {
 
 .playDelete {
   background-color: var(--quinary);
+  border-radius: 50px;
+  height: 15px;
 }
 
 .centerBtn {
@@ -138,6 +144,7 @@ body {
   margin: 0;
   font-size: 1.8rem;
   padding: 15px;
+  font-size: 24px;
 }
 
 .spotifyLogo {
@@ -161,6 +168,11 @@ body {
   height: calc(100% - 50px);
   background: var(--primary);
   border: none;
+}
+
+.email {
+  text-decoration: none;
+  color: #28282d;
 }
 
 /*Clipboard*/
