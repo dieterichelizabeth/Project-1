@@ -17,7 +17,80 @@
 //track list is saved in local storage AND saved as a spotify playlist on user's profile
 //share enables user to share our app, or allows user to share their playlist that they created
 
-//test
+//Search click functionality
+$("#submit").on("click", function() {
+console.log("The user clicked Search");
+    // TEMPORARY HARD CODED "RESULTS"- CREATES STORAGE FOR SONGS WHICH ARE PULLED FROM THE API
+    searchedTrack1 = {songSearch: ["Hooked On a Feeling"], artistSearch: ["Blue Sweede, Bjorn Skiffs"], albumsearch: ["Single- Hooked on a Feeling"], URLsearch: ["sampleURL"]}
+    searchedTrack2 = {songSearch: ["Go All the Way"], artistSearch: ["Raspberries"], albumsearch: ["Raspberries"], URLsearch: ["sampleURL"]}
+    searchedTrack3 = {songSearch: ["Spirit in the Sky"], artistSearch: ["Norman Greenbaum"], albumsearch: ["Music from the Motion Picture Michael"], URLsearch: ["sampleURL"]}
+    searchedTrack4 = {songSearch: ["I Want You Back"], artistSearch: ["The Jackson 5"], albumsearch: ["The Ultimate Collection: Jackson 5"], URLsearch: ["sampleURL"]}
+
+    searchedTracks = [];
+    searchedTracks.push(searchedTrack1, searchedTrack2, searchedTrack3, searchedTrack4);
+    // save to storage
+    localStorage.setItem("Search Results", JSON.stringify(searchedTracks));
+
+    // console.log(searchedTrack1.songSearch)
+    // console.log(searchedTrack1.artistSearch)
+    // console.log(searchedTrack1.albumsearch)
+
+    // Add div to the search results container
+    $('<div class="Parent" id="search-parent1" ></div>').appendTo('#search-results');
+
+    // Populate the "Search Results" field
+    for (let i = 0; i < 2; i++) { 
+    q = i + 1;
+    // add the div for song info
+    $('<li id="song-option' + q + '" class="Search' + q + ' Child' + q + '"></li>').appendTo('#search-parent1');
+    // add the image
+    $('<img class="spotifyLogo" src="./images/spotifyLogo.png" />').appendTo('#song-option' + q);
+    // add the div for song info
+     $('<div id="search-song-info' + q + '" class="task-info"></div>').appendTo('#song-option' + q);
+    // add Song Name, Artist, and Ablum Name
+    // console.log(searchedTracks[0].songSearch);
+    $('<p class="task-name">' + searchedTracks[i].songSearch + '</p>').appendTo('#search-song-info' + q);
+    $('<p class="task-name">' + searchedTracks[i].artistSearch +'</p>').appendTo('#search-song-info' + q);
+    $('<p class="task-name">' + searchedTracks[i].albumsearch + '</p>').appendTo('#search-song-info' + q);
+
+    // add the div for song info
+    $('<div id="hold-button' + q + '" class="centerBtn task-info""></div>').appendTo('#song-option' + q);
+    // add the play/add buttons
+    $('<button class="btn playDelete">Play</button>').appendTo('#hold-button' + q);
+    $('<button id="add-to-track" class="btn playDelete">Add</button>').appendTo('#hold-button' + q);
+    }
+
+    // Add div to the search results container
+    $('<div class="Parent" id="search-parent2" ></div>').appendTo('#search-results');
+
+    // Populate the "Search Results" field
+    for (let i = 2; i < 4; i++) { 
+        q = i + 1;
+        // add the div for song info child 2 child 1
+        $('<li id="song-option' + q + '"></li>').appendTo('#search-parent2');
+        // add the image
+        $('<img class="spotifyLogo" src="./images/spotifyLogo.png" />').appendTo('#song-option' + q);
+        // add the div for song info
+         $('<div id="search-song-info' + q + '" class="task-info"></div>').appendTo('#song-option' + q);
+        // add Song Name, Artist, and Ablum Name
+        // console.log(searchedTracks[0].songSearch);
+        $('<p class="task-name">' + searchedTracks[i].songSearch + '</p>').appendTo('#search-song-info' + q);
+        $('<p class="task-name">' + searchedTracks[i].artistSearch +'</p>').appendTo('#search-song-info' + q);
+        $('<p class="task-name">' + searchedTracks[i].albumsearch + '</p>').appendTo('#search-song-info' + q);
+    
+        // add the div for song info
+        $('<div id="hold-button' + q + '" class="centerBtn task-info""></div>').appendTo('#song-option' + q);
+        // add the play/add buttons
+        $('<button class="btn playDelete">Play</button>').appendTo('#hold-button' + q);
+        $('<button id="add-to-track" class="btn playDelete">Add</button>').appendTo('#hold-button' + q);
+        }
+    $("#song-option3").addClass("Search3 Child2");
+    $("#song-option4").addClass("Search4 Child1");
+
+});
+
+
+
 
 // Loads planner from local storage
 var loadTrackList = function() {
@@ -45,16 +118,6 @@ var loadTrackList = function() {
     // for (let i = 0; i < 10; i++) { 
     // }
     }
-
-    // TEMPORARY- CREATES STORAGE FOR SONGS WHICH ARE PULLED FROM THE API
-    searchedTracks = {
-        songSearch: [],
-        artistSearch: [],
-        albumsearch: [],
-        URLsearch: [],
-    }
-    // save to storage
-    localStorage.setItem("Search Results", JSON.stringify(searchedTracks));
 };
 
 // when the "add" button is clicked, the song details move to tracklist
@@ -126,6 +189,10 @@ COMPLETED
 - local storage appears on page load
     - if no local storage exists, it is created for the user
     - TEMPORARY: a search results local storage is created to hold mock song variables
+- when a user clicks search, search results appear
+    - the results are saved to local storage
+    - TEMPORARILY USING HARD CODED ELEMENTS TO LOCAL STORAGE
+    - each song result will be a value placed in the object of either Track List or Search Result
 - dynamically generate tracks to track list
     - if no tracks are present: p element appears informing user to search + add a song
 - new id's added for targeting elements through event listeners
@@ -133,6 +200,12 @@ COMPLETED
     - the song data is saved in local storage
     - the add to track function runs and displays the song to the user
 - songs are removed from the tracklist on click of the delete button
+
+TO DO
+- when the user clicks search again, the old storage is cleared and new data is saved
+- when the songs are saved to local storage- they display on the page
+- when the user saves a song- that value is saved in local storage
+- when a user clicks delete- that local storage value in the object is removed
 */
 
 /* 
@@ -150,7 +223,7 @@ ISSUES
 */
 
 /*
-Previous Song Format
+Previous Track List Format
 <li class="task-item" data-task-id="1">
 <div class="task-info">
   <img class="spotifyLogo" src="./images/spotifyLogo.png" />
@@ -165,4 +238,76 @@ Previous Song Format
   <!-- Adds song to the "track list" -->
 </div>
 </li>
+*/
+
+/*
+Previous Search Results Format
+        <!-- CHANGE: ADDED ID FOR DYNAMICALLY GENERATED ELEMENT TO TARGET -->
+        <div class="Parent" id="search-parent">
+          <!-- song populates -->
+          <!-- CHANGE: ADDED ID FOR JQUERY BUTTON LISTENER -->
+          <li id="song-option1" class="Search1 Child1" data-task-id="1">
+            <img class="spotifyLogo" src="./images/spotifyLogo.png" />
+            <!-- CHANGE: ADDED ID FOR DYNAMICALLY GENERATED ELEMENT TO TARGET -->
+            <div id="search-song-info" class="task-info">
+              <p class="task-name">Song Name</p>
+              <p class="task-name">Artist</p>
+              <p class="task-name">Album Name</p>
+            </div>
+            <div class="centerBtn">
+              <button class="btn playDelete">Play</button>
+              <!-- Play in the play in the "play song" -->
+              <!-- CHANGE: ADDED ID FOR JQUERY BUTTON LISTENER -->
+              <button id="add-to-track" class="btn playDelete">Add</button>
+              <!-- Adds song to the "track list" -->
+            </div>
+          </li>
+          <!-- song populates -->
+          <li class="Search2 Child2" data-task-id="1">
+            <img class="spotifyLogo" src="./images/spotifyLogo.png" />
+            <div class="task-info">
+              <p class="task-name">Song Name</p>
+              <p class="task-name">Artist</p>
+              <p class="task-name">Album Name</p>
+            </div>
+            <div class="centerBtn">
+              <button class="btn playDelete">Play</button>
+              <!-- Play in the play in the "play song" -->
+              <button class="btn playDelete">Add</button>
+              <!-- Adds song to the "track list" -->
+            </div>
+          </li>
+        </div>
+        <div class="Parent">
+          <!-- song populates -->
+          <li class="Search3 Child2" data-task-id="1">
+            <img class="spotifyLogo" src="./images/spotifyLogo.png" />
+            <div class="task-info">
+              <p class="task-name">Song Name</p>
+              <p class="task-name">Artist</p>
+              <p class="task-name">Album Name</p>
+            </div>
+            <div class="centerBtn">
+              <button class="btn playDelete">Play</button>
+              <!-- Play in the play in the "play song" -->
+              <button class="btn playDelete">Add</button>
+              <!-- Adds song to the "track list" -->
+            </div>
+          </li>
+          <!-- song populates -->
+          <li class="Search4 Child1" data-task-id="1">
+            <img class="spotifyLogo" src="./images/spotifyLogo.png" />
+            <div class="task-info">
+              <p class="task-name">Song Name</p>
+              <p class="task-name">Artist</p>
+              <p class="task-name">Album Name</p>
+            </div>
+            <div class="centerBtn">
+              <button class="btn playDelete">Play</button>
+              <!-- Play in the play in the "play song" -->
+              <button class="btn playDelete">Add</button>
+              <!-- Adds song to the "track list" -->
+            </div>
+          </li>
+        </div>
 */
