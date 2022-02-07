@@ -213,31 +213,35 @@
    <h2 class="text-4xl m-1 text-center">Share Tape!</h2>
  
    <!-- Twitter (url, text, @mention) -->
-   <a href="https://twitter.com/share?url=<URL>&text=<TEXT>via=<USERNAME>" class="share-btn twitter">
+   <a href="https://twitter.com/share?url=<URL>&text=<TEXT>via=<USERNAME>" class="inline-block text-sm m-20 px-2 py-px text-center text-white" twitter>
      Twitter
    </a>
- 
+  <!--FIX: outline:none;-->
    <!-- Facebook (url) -->
-   <a href="https://www.facebook.com/sharer/sharer.php?u=<URL>" class="share-btn facebook">
+   <a href="https://www.facebook.com/sharer/sharer.php?u=<URL>" class="inline-block text-sm m-20 px-2 py-px text-center text-white facebook">
      Facebook
    </a>
- 
+ <!--FIX: outline:none;-->
    <!-- Clipboard -->
-   <div class="btn2">
-     <button class="clipboard">Click me to copy current URL</button>
+   <div class="items-baseline justify-center">
+     <button class="rounded-sm cursor-pointer text-base p-1 relative top-0">Click me to copy current URL</button>
+     <!--FIX: font-family: sans-serif;
+  transition: all 0.2s ease;
+  display: center;-->
      <p>Share your Mixtape!</p>
    </div>
  
  
    <!-- Reddit (url, title) -->
-   <a href="https://reddit.com/submit?url=<URL>&title=<TITLE>" class="share-btn reddit">
+   <a href="https://reddit.com/submit?url=<URL>&title=<TITLE>" class="inline-block text-sm m-20 px-2 py-px text-center text-white reddit">
      Reddit
    </a>
- 
+ <!--FIX: outline:none;-->
    <!-- Email (subject, body) -->
-   <a href="mailto:?subject=<SUBJECT>&body=<BODY>" class="share-btn email">
+   <a href="mailto:?subject=<SUBJECT>&body=<BODY>" class="inline-block text-sm m-20 px-2 py-px text-center text-white email">
     Email
     </a>
+    <!--FIX: outline:none;-->
   </section>
  <!--<script src="assets/js/tailwind.config.js"></script>-->
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
