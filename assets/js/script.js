@@ -25,10 +25,20 @@ var loadTrackList = function() {
 
     // if the user had not added any new sogngs-
     if (!playList) {
-     // add the new div and give it an ID
-     $('<p id="add-songs-warning">Click Stearch in the mixtape to add new songs!</p>').appendTo('#song-container');
-    console.log("no tracks");
-    }
+        // add the new div and give it an ID
+        $('<p id="add-songs-warning">Click Stearch in the mixtape to add new songs!</p>').appendTo('#song-container');
+        console.log("no tracks");
+
+        // declaire new storage variable
+        playList = {
+            SongName: [],
+            Artist: [],
+            AlbumName: [],
+            songURL: [],
+        };
+        // save to storage
+        localStorage.setItem("Track List", JSON.stringify(playList));
+        }
 
     // If the user has songs, display on the screen using a for loop?
     else{
@@ -104,13 +114,14 @@ COMPLETED
 FUTURE IMPROVEMENTS
 - style the "no songs" p element
 - turn loadTrackList into jQuery on load function?
--
+- add search results to local storage in a seperate area to pull from?
 */
 
 /*
 ISSUES
 - if a user "adds" a song multiple times- it messes up the target/format of the song itself
     - list item # needs to be added
+    -  LOCAL STORAGE! 
 */
 
 /*
