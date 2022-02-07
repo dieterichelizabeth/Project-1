@@ -45,6 +45,16 @@ var loadTrackList = function() {
     // for (let i = 0; i < 10; i++) { 
     // }
     }
+
+    // TEMPORARY- CREATES STORAGE FOR SONGS WHICH ARE PULLED FROM THE API
+    searchedTracks = {
+        songSearch: [],
+        artistSearch: [],
+        albumsearch: [],
+        URLsearch: [],
+    }
+    // save to storage
+    localStorage.setItem("Search Results", JSON.stringify(searchedTracks));
 };
 
 // when the "add" button is clicked, the song details move to tracklist
@@ -55,7 +65,15 @@ $("#add-to-track").on("click", function() {
     var id = songSelected.getAttribute("id");
     console.log(id)
    
-    i = 1
+    // variables to save the song
+    playList = {
+        SongName: [],
+        Artist: [],
+        AlbumName: [],
+        songURL: [],
+    };
+
+    i = 0
     //If P is there, remove the p
     $( "#add-songs-warning" ).remove();
     // Add the list item to song container
@@ -77,6 +95,7 @@ $("#add-to-track").on("click", function() {
    
     i = i++
     // saves to local storage
+    localStorage.setItem("Track List", JSON.stringify(playList));
 
 // pass element to delete function
 deleteSong();
@@ -104,9 +123,15 @@ loadTrackList();
 
 /*
 COMPLETED
+- local storage appears on page load
+    - if no local storage exists, it is created for the user
+    - TEMPORARY: a search results local storage is created to hold mock song variables
 - dynamically generate tracks to track list
     - if no tracks are present: p element appears informing user to search + add a song
 - new id's added for targeting elements through event listeners
+- when a user clicks add
+    - the song data is saved in local storage
+    - the add to track function runs and displays the song to the user
 - songs are removed from the tracklist on click of the delete button
 */
 
