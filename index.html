@@ -11,10 +11,10 @@
  
 <!------ Logo and Tape Image ---------->
  
-<body>
+<body class="flex flex-col m-0 px-6 py-8">
  <header>
    <!---- logo ---->
-   <div id="logo">
+   <div id="logo" class="block mx-auto p-4">
      <a href="">
        <img src="./images/MixTapelogo.jpg" alt="Mixtape Logo" />
      </a>
@@ -37,7 +37,7 @@
  
      <!-- class=“btn my-sm-0 ms-1 btn-outline-light my-2" -->
      <!---- Submit Button for your spotify API search---->
-     <button id="submit" class="btn" type="submit">
+     <button id="submit" class="border-solid inline-block text-base py-4 px-8 text-center text-white no-underline" type="submit">
        <i class="bi bi-search"></i>Search
      </button>
    </div>
@@ -189,7 +189,7 @@
  </section>
  
  <!-- 2 Buttons for the track list -->
- <div class="center">
+ <div class="m-auto">
    <!-- Clear Button - Clears playlist -->
    <button type="clear" id="“btnclear”" class="btn">Clear</button>
    <!-- Submit Button - Triggers Modal -->
