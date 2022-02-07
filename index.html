@@ -46,7 +46,7 @@
  <!---- Example songs ---->
  <section class="">
    <!---- Name of the section ---->
-   <h2 class="list-title">Search Results</h2>
+   <h2 class="text-4xl m-1 text-center">Search Results</h2>
    <!---- See what kind of tag required for songs per Spotify API ---->
    <ul class="search-results" id="tasks-to-do">
      <div class="Parent">
@@ -118,11 +118,13 @@
  
  <!-- ADD PLAYER HERE -->
  
- <section class="track-list-wrapper">
+ <section class="flex-grow mx-5 mt-0 mb-5">
    <!---- Name of the section ---->
-   <h2 class="list-title">Track list</h2>
+   <h2 class="text-4xl m-1 text-center">Track list</h2>
+   <!--FIX: color; border-radius:50px;-->
    <!---- See what kind of tag required for songs per Spotify API ---->
-   <ul class="task-list" id="tasks-to-do">
+   <ul class="p-4" id="tasks-to-do">
+     <!-- FIX: list-style:none; height: calc(100% - 50px);-->
      <div class="">
        <!-- song populates -->
        <li class="task-item" data-task-id="1">
@@ -206,7 +208,7 @@
  <!-- </div> -->
  <!-- Trigger/Open The Modal -->
  <section class="track-list-wrapper">
-   <h2 class="list-title">Share Tape!</h2>
+   <h2 class="text-4xl m-1 text-center">Share Tape!</h2>
  
    <!-- Twitter (url, text, @mention) -->
    <a href="https://twitter.com/share?url=<URL>&text=<TEXT>via=<USERNAME>" class="share-btn twitter">
