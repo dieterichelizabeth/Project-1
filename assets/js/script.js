@@ -19,7 +19,6 @@
 
 //test
 
-
 // Loads planner from local storage
 var loadTrackList = function() {
     playList = JSON.parse(localStorage.getItem("Track List"));
@@ -31,14 +30,92 @@ var loadTrackList = function() {
     console.log("no tracks");
     }
 
-    // If the user has songs, display on the screen
+    // If the user has songs, display on the screen using a for loop?
     else{
     // for (let i = 0; i < 10; i++) { 
     // }
     }
+};
+
+// when the "add" button is clicked, the song details move to tracklist
+$("#add-to-track").on("click", function() {
+   console.log("add clicked!")
+    // Grabs the song selected by targeted id
+    var songSelected = event.target.parentNode.parentNode;
+    var id = songSelected.getAttribute("id");
+    console.log(id)
+   
+    i = 1
+    //If P is there, remove the p
+    $( "#add-songs-warning" ).remove();
+    // Add the list item to song container
+    $('<li id="Song' + i + '"class="task-item""></li>').appendTo('#song-container');
+    // add the div for song info
+    $('<div id="hold-info"' + 'class="task-info""></div>').appendTo('#Song'+ i);
+    // add the image
+    $('<img class="spotifyLogo" src="./images/spotifyLogo.png" />').appendTo('#hold-info');
+    // add Song Name, Artist, and Ablum Name
+    $('<p class="task-name">Song Name</p>').appendTo('#hold-info');
+    $('<p class="task-name">Artist</p>').appendTo('#hold-info');
+    $('<p class="task-name">Album Name</p>').appendTo('#hold-info');
+
+    // add the div for song info
+    $('<div id="hold-buttons"' + 'class="task-info""></div>').appendTo('#Song'+ i);
+    // add the pplay/delete button
+    $('<button class="btn play-btn">Play</button>').appendTo('#hold-buttons');
+    $('<button id= "deleteTrack" class="btn delete-btn">delete</button>').appendTo('#hold-buttons');
+   
+    i = i++
+    // saves to local storage
+
+// pass element to delete function
+deleteSong();
+});
+
+// Delete song function
+var deleteSong = function() {
+$('#deleteTrack').click(function(){
+    console.log("delete clicked!")
+     // Grabs the song selected by targeted id
+     var songSelected = event.target.parentNode.parentNode;
+     var id = songSelected.getAttribute("id");
+     console.log(id)
+     // removes the song
+     $("#" + id).remove();
+
+     // If all songs are deleted: re-add the p element
+    
+     // saves to local storage
+ });
+}
+// load songs for the first time
+loadTrackList();
 
 
-{/* <li class="task-item" data-task-id="1">
+/*
+COMPLETED
+- dynamically generate tracks to track list
+    - if no tracks are present: p element appears informing user to search + add a song
+- new id's added for targeting elements through event listeners
+- songs are removed from the tracklist on click of the delete button
+*/
+
+/* 
+FUTURE IMPROVEMENTS
+- style the "no songs" p element
+- turn loadTrackList into jQuery on load function?
+-
+*/
+
+/*
+ISSUES
+- if a user "adds" a song multiple times- it messes up the target/format of the song itself
+    - list item # needs to be added
+*/
+
+/*
+Previous Song Format
+<li class="task-item" data-task-id="1">
 <div class="task-info">
   <img class="spotifyLogo" src="./images/spotifyLogo.png" />
   <p class="task-name">Song Name</p>
@@ -51,74 +128,5 @@ var loadTrackList = function() {
   <button class="btn delete-btn">delete</button>
   <!-- Adds song to the "track list" -->
 </div>
-</li> */}
-
-};
-
-// when the "add" button is clicked, the song details move to tracklist
-$("#add-to-track").on("click", function() {
-   console.log("add clicked!")
-    // Grabs the song selected by targeted id
-    var songSelected = event.target.parentNode.parentNode;
-    var id = songSelected.getAttribute("id");
-    console.log(id)
-   
-    //If P is there, remove the p
-    $( "#add-songs-warning" ).remove();
-
-    // Add the list item to song container
-    $('<li id="Song" class="task-item" data-task-id="1" "></li>').appendTo('#song-container');
-    // add the div for song info
-    $('<div id="hold-info"' + 'class="task-info""></div>').appendTo('#Song');
-    // add the image
-    $('<img class="spotifyLogo" src="./images/spotifyLogo.png" />').appendTo('#hold-info');
-    // add Song Name, Artist, and Ablum Name
-    $('<p class="task-name">Song Name</p>').appendTo('#hold-info');
-    $('<p class="task-name">Artist</p>').appendTo('#hold-info');
-    $('<p class="task-name">Album Name</p>').appendTo('#hold-info');
-
-    // add the div for song info
-    $('<div id="hold-buttons"' + 'class="task-info""></div>').appendTo('#Song');
-    // add the pplay/delete button
-    $('<button class="btn play-btn">Play</button>').appendTo('#hold-buttons');
-    $('<button id= "deleteTrack" class="btn delete-btn">delete</button>').appendTo('#hold-buttons');
-   
-
-    // saves to local storage
-});
-
-$("#deleteTrack").on("click", function() {
-    console.log("delete clicked!")
-     // Grabs the song selected by targeted id
-     var songSelected = event.target.parentNode.parentNode;
-     var id = songSelected.getAttribute("id");
-     console.log(id)
-    
-     //If P is there, remove the p
-     $( "#Song" ).remove();
-     // saves to local storage
- });
-
-// load songs for the first time
-loadTrackList();
-
-
-/*
-COMPLETED
-- dynamically generate tracks to track list
-    - if no tracks are present: p element appears informing user to search + add a song
-- new id's added for targeting elements through event listeners
-*/
-
-/* 
-future improvement 
-- style the "no songs" p element
-- turn loadTrackList into jQuery on load function?
--
-*/
-
-/*
-ISSUES
-- if a user "adds" a song multiple times- it messes up the target/format of the song itself
-    - list item # needs to be added
+</li>
 */
