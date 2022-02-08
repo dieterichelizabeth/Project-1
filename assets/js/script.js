@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+//clipboard
+var $temp = $("<input>");
+var $url = $(location).attr('href=file:///Users/ciarahargis/Desktop/Code/startercode/Project-1/index.html');
+
+$('.clipboard').on('click', function() {
+  $("body").append($temp);
+  $temp.val($url).select();
+  document.execCommand("copy");
+  $temp.remove();
+  $("p").text("URL copied!");
+})
+=======
 //when app is opened, all assets and links load
 //when user types into search bar, they can search spotify database by song title
 //when search request sent, playlist populates with random songs from results
@@ -16,3 +29,4 @@
 //* track list is enabled to add and remove songs up to 10 songs
 //track list is saved in local storage AND saved as a spotify playlist on user's profile
 //share enables user to share our app, or allows user to share their playlist that they created
+>>>>>>> main
