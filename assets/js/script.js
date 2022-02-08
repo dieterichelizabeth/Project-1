@@ -132,14 +132,13 @@ $("#add-to-track").on("click", function() {
 
     searchedTracks = JSON.parse(localStorage.getItem("Search Results"));
     console.log(searchedTracks)
-    n = 1
     i = num[11] - 1
     //If P is there, remove the p
     $( "#add-songs-warning" ).remove();
     // Add the list item to song container
-    $('<li id="Song' + n + '"class="task-item""></li>').appendTo('#song-container');
+    $('<li id="Song" class="task-item""></li>').appendTo('#song-container');
     // add the div for song info
-    $('<div id="hold-info"' + 'class="task-info""></div>').appendTo('#Song'+ n);
+    $('<div id="hold-info"' + 'class="task-info""></div>').appendTo('#Song');
     // add the image
     $('<img class="spotifyLogo" src="./images/spotifyLogo.png" />').appendTo('#hold-info');
     // add Song Name, Artist, and Ablum Name
@@ -148,7 +147,7 @@ $("#add-to-track").on("click", function() {
     $('<p class="task-name">' + searchedTracks[i].albumsearch + '</p>').appendTo('#hold-info');
 
     // add the div for song info
-    $('<div id="hold-buttons"' + 'class="task-info""></div>').appendTo('#Song'+ n);
+    $('<div id="hold-buttons"' + 'class="task-info""></div>').appendTo('#Song');
     // add the pplay/delete button
     $('<button class="btn play-btn">Play</button>').appendTo('#hold-buttons');
     $('<button id= "deleteTrack" class="btn delete-btn">delete</button>').appendTo('#hold-buttons');
