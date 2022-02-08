@@ -162,20 +162,35 @@
   border-radius: 50px;
   display: flex;
   justify-content: center;
+<<<<<<< HEAD
  }
   
  .task-list {
+=======
+}
+
+.task-list {
+>>>>>>> main
   list-style: none;
   padding: 15px;
   height: calc(100% - 50px);
   background: var(--primary);
   border: none;
   text-align: center;
+<<<<<<< HEAD
  }
   
   
  /*Clipboard*/
  .clipboard {
+=======
+}
+
+
+/*Clipboard*/
+.clipboard {
+  border: 0;
+>>>>>>> main
   padding: 5px;
   border-radius: 3px;
   background-image: var(--senary);
@@ -187,12 +202,20 @@
   top: 0;
   transition: all 0.2s ease;
   display: center;
+<<<<<<< HEAD
  }
  .btn2 {
    align-items: baseline;
     justify-content: center;
  }
  .share-btn {
+=======
+}
+.btn {
+    justify-content: center;
+}
+.share-btn {
+>>>>>>> main
     display: inline-block;
     color: #ffffff;
     border: none;
@@ -200,13 +223,21 @@
     outline: none;
     text-align: center;
     font-size: 0.9em;
+<<<<<<< HEAD
     margin: 5em;
   }
    .share-btn:focus,
+=======
+    margin: 0 0.2em;
+  }
+  
+  .share-btn:focus,
+>>>>>>> main
   .share-btn:hover {
     text-decoration: none;
     opacity: 0.8;
   }
+<<<<<<< HEAD
    .share-btn:active {
     color: #e2e2e2;
   }
@@ -217,6 +248,20 @@
   
  /* Adapt to screen size */
  @media screen and (max-width: 980px) {
+=======
+  
+  .share-btn:active {
+    color: #e2e2e2;
+  }
+  
+  .share-btn.twitter     { background: #55acee; }
+  .share-btn.facebook    { background: #3B5998; }
+  .share-btn.reddit      { background: #ff5700; }
+  .share-btn.email       { background: var(--quinary); }
+
+/* Adapt to screen size */
+@media screen and (max-width: 980px) {
+>>>>>>> main
   form .form-group {
     flex: 1 100%;
   }
