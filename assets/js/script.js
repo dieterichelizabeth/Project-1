@@ -87,6 +87,7 @@ console.log("The user clicked Search");
     $("#song-option3").addClass("Search3 Child2");
     $("#song-option4").addClass("Search4 Child1");
 
+addTracks();
 });
 
 
@@ -120,49 +121,45 @@ var loadTrackList = function() {
     }
 };
 
+var addTracks = function() {
 // when the "add" button is clicked, the song details move to tracklist
 $("#add-to-track").on("click", function() {
    console.log("add clicked!")
     // Grabs the song selected by targeted id
     var songSelected = event.target.parentNode.parentNode;
     var id = songSelected.getAttribute("id");
-    console.log(id)
-   
-    // variables to save the song
-    playList = {
-        SongName: [],
-        Artist: [],
-        AlbumName: [],
-        songURL: [],
-    };
+    var num = id.split("");
 
-    i = 0
+    searchedTracks = JSON.parse(localStorage.getItem("Search Results"));
+    console.log(searchedTracks)
+    n = 1
+    i = num[11] - 1
     //If P is there, remove the p
     $( "#add-songs-warning" ).remove();
     // Add the list item to song container
-    $('<li id="Song' + i + '"class="task-item""></li>').appendTo('#song-container');
+    $('<li id="Song' + n + '"class="task-item""></li>').appendTo('#song-container');
     // add the div for song info
-    $('<div id="hold-info"' + 'class="task-info""></div>').appendTo('#Song'+ i);
+    $('<div id="hold-info"' + 'class="task-info""></div>').appendTo('#Song'+ n);
     // add the image
     $('<img class="spotifyLogo" src="./images/spotifyLogo.png" />').appendTo('#hold-info');
     // add Song Name, Artist, and Ablum Name
-    $('<p class="task-name">Song Name</p>').appendTo('#hold-info');
-    $('<p class="task-name">Artist</p>').appendTo('#hold-info');
-    $('<p class="task-name">Album Name</p>').appendTo('#hold-info');
+    $('<p class="task-name">' + searchedTracks[i].songSearch + '</p>').appendTo('#hold-info');
+    $('<p class="task-name">' + searchedTracks[i].artistSearch + '</p>').appendTo('#hold-info');
+    $('<p class="task-name">' + searchedTracks[i].albumsearch + '</p>').appendTo('#hold-info');
 
     // add the div for song info
-    $('<div id="hold-buttons"' + 'class="task-info""></div>').appendTo('#Song'+ i);
+    $('<div id="hold-buttons"' + 'class="task-info""></div>').appendTo('#Song'+ n);
     // add the pplay/delete button
     $('<button class="btn play-btn">Play</button>').appendTo('#hold-buttons');
     $('<button id= "deleteTrack" class="btn delete-btn">delete</button>').appendTo('#hold-buttons');
    
-    i = i++
     // saves to local storage
     localStorage.setItem("Track List", JSON.stringify(playList));
 
 // pass element to delete function
 deleteSong();
 });
+}
 
 // Delete song function
 var deleteSong = function() {
@@ -193,6 +190,7 @@ COMPLETED
     - the results are saved to local storage
     - TEMPORARILY USING HARD CODED ELEMENTS TO LOCAL STORAGE
     - each song result will be a value placed in the object of either Track List or Search Result
+    - when the songs are saved to local storage- they display on the page
 - dynamically generate tracks to track list
     - if no tracks are present: p element appears informing user to search + add a song
 - new id's added for targeting elements through event listeners
@@ -203,9 +201,8 @@ COMPLETED
 
 TO DO
 - when the user clicks search again, the old storage is cleared and new data is saved
-- when the songs are saved to local storage- they display on the page
 - when the user saves a song- that value is saved in local storage
-- when a user clicks delete- that local storage value in the object is removed
+    - when a user clicks delete- that local storage value in the object is removed
 */
 
 /* 
